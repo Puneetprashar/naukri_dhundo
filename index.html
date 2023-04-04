@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Resume Builder Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="header">
+        <img src="./logo.png" alt="logo">
+        <nav>
+            <div class="nav-links" id="navLinks">
+               <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="form.html">Templates</a></li>
+                    <li><hr class="horiLine"></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()" ></i>
+        </nav>
+<div class="text-box">
+    <h1>Ab Naukri dhundo <br>Minto mai!!</h1>
+    <p>Use professional field-tested resume templates that follow the exact 'resume rules' employers look for<br>Easy to use and done within minutes-try now for free!</p>
+    <a href="" class="hero-btn">Visit Us To know More</a>
+</div>
+    </section>
+    <section class="Process">
+        <h1>3 Step Process<br>For<br>Finding The BEST Job</h1>
+        <div class="row">
+            <div class="process-col">
+                <h3>Details</h3>
+                <p>Register and login then Fill your details with various fill-up option according to your choice.You can also get some suggestion for discription and other things which can help you to create beautiful resume. </p>
+            </div>
+            <div class="process-col">
+                <h3>SELECT DESIGN</h3>
+                <p>Choose from modern and professional templates.All of which can be customized to your liking </p>
+            </div>
+            <div class="process-col">
+                <h3>DOWNLOD RESUME</h3>
+                <p>Download your resume and send it straight to the company or hiring manager.</p>
+            </div>
+        </div>
+    </section>
+    <section class="job">
+        <div class="job-box">
+            <h1>Find Your Dream Jobs<br>With<br> NaukriDhundo</h1>
+            <a href="" class="job-btn">Find Now</a>
+        </div>
+        <img align="left" alt="" src="./images.png" >
+        
+    </section>
+<section class="footer">
+    <h2>About Us</h2>
+    <p>This website has been made as a part of web technology project by the students of RGIPT</p>
+    <div class="icons">
+<i class="fa fa-facebook"></i>
+<i class="fa fa-twitter"></i>
+<i class="fa fa-instagram"></i>
+<i class="fa fa-linkedin"></i>
+    </div>
+<p>Made by PUNEET AND AVHAD </p>
+</section>
+    
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+</body>
+</html>

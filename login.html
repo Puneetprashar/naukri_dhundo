@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in and sign up form</title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <script src="https://kit.fontawesome.com/0a41f32e7d.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="form-box">
+        <h1 id="title">Sign Up</h1>
+        <form id="reg-form">
+            <div class="input-group">
+                <div class="input-field" id="nameField">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="Name" placeholder="Name">
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="Email" placeholder="Email">
+
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Password">
+
+                </div>
+                <p>Forgot password<a href="#"> Click Here!</a></p>
+            </div>
+            <div class="btn-field">
+                <button type="button" id="signupBtn">Sign up</button>
+                <button type="button" id="signinBtn" class="disable">Sign in</button>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+<script>
+    const form=document.getElementById('reg-form')
+    let signupBtn = document.getElementById("signupBtn");
+    let signinBtn = document.getElementById("signinBtn");
+    signupBtn.addEventListener('click',registeruser)
+    signinBtn.addEventListener('click',loginuser)
+    
+    
+    let nameField = document.getElementById("nameField");
+    async function registeruser(event)
+    {
+    //let title = document.getElementById('title');
+    let name = document.getElementById('Name').value;
+    console.log(name);
+    let email = document.getElementById('Email').value;
+    console.log(email);
+    let password = document.getElementById('Password').value;
+    console.log(password);
+    const result= await fetch('api/signup',{
+    method:'POST',
+    headers:{
+        'Content-Type':'signup/json'
+    },
+    body:JSON.stringify(
+        { name,
+            email,
+            password
+              
+        }
+    ).then(res=>res.json)
+   })
+}
+   async function loginuser(event)
+    {
+    let title1 = document.getElementById('title');
+    
+   // let name1 = document.getElementById('Name').value;
+   // console.log(name1);
+    let email1 = document.getElementById('Email').value;
+    console.log(email1);
+    let password1= document.getElementById('Password').value;
+    const result= await fetch('api/signup',{
+    method:'POST',
+    headers:{
+        'Content-Type':'signup/json'
+    },
+    body:JSON.stringify(
+        { 
+            email1,
+            password1
+              
+        }
+    ).then(res=>res.json)
+   })
+    }
+    signinBtn.onclick = function(){
+        nameField.style.maxHeight = "0";
+        title.innerHTML = "Sign In";
+        signupBtn.classList.add("disable");
+        signinBtn.classList.remove("disable");
+    }
+    signupBtn.onclick = function(){
+        nameField.style.maxHeight = "60px";
+        title.innerHTML = "Sign Up";
+        signupBtn.classList.remove("disable");
+        signinBtn.classList.add("disable");
+    }
+    
+</script>
+</body>
+</html>

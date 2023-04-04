@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="form1.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  
+        <title>Register form</title>
+       
+
+    </head>
+    <body>
+        <div class="container" id="cv-form">
+            <h1 class="text-center my-2">Resume Generator</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <!--first col-->
+                    <h3>Personal Information</h3>
+
+                    <div class="form-group">
+                        <label for="nameField">Your Name</label>
+                        <input
+                            type="text"
+                            id="nameField"
+                            placeholder="Enter here"
+                            class="form-control"
+                            />
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="contactField">Your Contact</label>
+                        <input
+                            type="text"
+                            id="contactField"
+                            placeholder="Enter here"
+                            class="form-control"
+                            />
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="addressField">Your Address </label>
+                        <textarea
+                            
+                            id="addressField"
+                            placeholder="Enter here"
+                            class="form-control"
+                            rows="5"
+                        ></textarea>
+                    </div>
+
+                    <p class="text-secondary my-3">Important Links</p>
+
+                    <div class="form-group mt-2">
+                        <label for="emailField">Email</label>
+                        <input
+                            type="text"
+                            id="emailField"
+                            placeholder="Enter here"
+                            class="form-control"
+                            />
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="gitField">Git hub</label>
+                        <input
+                            type="text"
+                            id="gitField"
+                            placeholder="Enter here"
+                            class="form-control"
+                            />
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="linkedField">LinkedIn</label>
+                        <input
+                            type="text"
+                            id="linkedField"
+                            placeholder="Enter here"
+                            class="form-control"
+                            />
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <!--2nd col-->
+                    <h3>Professional Information</h3>
+
+                    <div class="form-group mt-2" id="we">
+                        <label for="">Work Experience </label>
+                        <textarea
+                            
+                            placeholder="Enter here"
+                            class="form-control weField"
+                            rows="3"
+                            
+                        ></textarea>
+
+                        <div class="container text-center mt-2 " id="weAddButton">
+                            <button onclick="addNewWEField()" class="btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+                    <div class="form-group mt-2" id="eq">
+                        <label for="">Education </label>
+                        <textarea
+                           
+                            placeholder="Enter here"
+                            class="form-control eqField"
+                            rows="3"
+                           
+                        ></textarea>
+
+                        <div class="container text-center mt-2" id="eqAddButton">
+                            <button onclick="addNewEQField()" class="btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+                    <div class="form-group mt-2" id="pj">
+                        <label for="">Projects </label>
+                        <textarea
+                           
+                            placeholder="Enter here"
+                            class="form-control pjField"
+                            rows="2"
+                           
+                        ></textarea>
+
+                        <div class="container text-center mt-2" id="pjAddButton">
+                            <button onclick="addNewPJField()" class="btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+                    <div class="form-group mt-2" id="sk">
+                        <label for="">Skills </label>
+                        <textarea
+                           
+                            placeholder="Enter here"
+                            class="form-control skField"
+                            rows="2"
+                           
+                        ></textarea>
+
+                        <div class="container text-center mt-2" id="skAddButton">
+                            <button onclick="addNewSKField()" class="btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container text-center mt-3">
+                <button onclick="generate()" class="btn btn-primary btn-lg">Generate</button>
+            </div>
+
+        </div>
+
+        <!-- cv template-->
+
+        <div class="container" id="cv-template">
+
+            <div class="row">
+
+                <div class="col-md-4 text-center py-5 background">
+                    <!--1st col-->
+                    <div class="container">
+                        <h2 id="nameT1">Dhanraj Avhad</h2>
+                        <p id="contactT">+91131344131 </p>
+                        <p id="addressT"> 414002 Balikshrm road Ahmednagar , Maharashtra , India</p>
+
+                        <hr />
+                        <p><a id="emailT" href="#1"> dhanraj30102002@gmail.com</a>
+                        </p>
+                        <p><a id="gitT" href="#1"> dhanraj_30.git hub</a>
+                        </p>
+                        <p><a id="linkedT" href="#1"> Dhanraj Avhad .LinkedIn</a>
+                        </p>
+                        
+                    </div>
+
+                </div>
+                <div class="col-md-8 py-5">
+                    <!--2nd col-->
+                    
+                    <div class="card mt-4">
+                        <div class="card-header ">
+                            <h3>Work Experience</h3>
+
+                        </div>
+                        <div class="card-body">
+                            <ul id="weT">
+                                <li>wuewje ijefiwjefjvvwldnvsdvsdvsn silvvsnl knv</li>
+                                <li>ddvnslnvs sfvsvsnl ljnlnnlinlnils</li>
+                                <li>kkevjwevwewihkl wlwihihwvn eijvv eihfleihv eiflec</li>
+                                <li>ldvsldnvs lknvnsjnn lknlvnsjnln lkfnvvlkn</li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Education-->
+                    <div class="card mt-4">
+                        <div class="card-header ">
+                            <h3>Education</h3>
+
+                        </div>
+                        <div class="card-body">
+                            <ul id="eqT">
+                                <li>wuewje ijefiwjefjvvwldnvsdvsdvsn silvvsnl knv</li>
+                                <li>ddvnslnvs sfvsvsnl ljnlnnlinlnils</li>
+                                <li>kkevjwevwewihkl wlwihihwvn eijvv eihfleihv eiflec</li>
+                                <li>ldvsldnvs lknvnsjnn lknlvnsjnln lkfnvvlkn</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <!-- Projects-->
+                    <div class="card mt-4">
+                        <div class="card-header ">
+                            <h3>Projects</h3>
+
+                        </div>
+                        <div class="card-body">
+                            <ul id="pjT">
+                                <li>wuewje ijefiwjefjvvwldnvsdvsdvsn silvvsnl knv</li>
+                                <li>ddvnslnvs sfvsvsnl ljnlnnlinlnils</li>
+                                <li>kkevjwevwewihkl wlwihihwvn eijvv eihfleihv eiflec</li>
+                                <li>ldvsldnvs lknvnsjnn lknlvnsjnln lkfnvvlkn</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <!-- Skills-->
+                     <div class="card mt-4">
+                        <div class="card-header ">
+                            <h3>Skills</h3>
+
+                        </div>
+                        <div class="card-body">
+                            <ul id="skT">
+                                <li>wuewje ijefiwjefjvvwldnvsdvsdvsn silvvsnl knv</li>
+                                <li>ddvnslnvs sfvsvsnl ljnlnnlinlnils</li>
+                                <li>kkevjwevwewihkl wlwihihwvn eijvv eihfleihv eiflec</li>
+                                <li>ldvsldnvs lknvnsjnn lknlvnsjnln lkfnvvlkn</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="container mt-3 text-center">
+                        <button onclick="printCV()" class="btn ">
+                            Print Resume
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <script src="form2.js" defer></script>
+     
+    </body>
+</html>
